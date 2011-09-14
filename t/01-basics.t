@@ -39,14 +39,21 @@ test_parse name => 'decimal (en 1)', args=>{text => '12.31'}, res => 12.31;
 test_parse name => 'decimal (en 2)', args=>{text => '12,3'}, res => 12.3;
 test_parse name=>'thousand sep 1', args=>{text=>'123.001'}, res => 123001;
 test_parse name=>'thousand sep 2', args=>{text=>'12.300.000'}, res => 12300000;
+
 test_parse name=>'decimal+thousand sep 1',
-    args=>{text=>'12.300,01'}, res => 12300.01;
+    args=>{text=>'-12.300,01'}, res => -12300.01;
 test_parse name=>'decimal+thousand sep 2',
     args=>{text=>'12.300.01'}, res => 12300.01;
 test_parse name=>'decimal+thousand sep 3',
     args=>{text=>'12,300.01'}, res => 12300.01;
 test_parse name=>'decimal+thousand sep 4',
     args=>{text=>'12,300,01'}, res => 12.3;
+
+test_parse name=>'exponent 1', args=>{text=>'1e5'}, res => 1e5;
+test_parse name=>'exponent 2', args=>{text=>'-1e5'}, res => -1e5;
+test_parse name=>'exponent 3', args=>{text=>'1e-5'}, res => 1e-5;
+test_parse name=>'exponent 4', args=>{text=>'-1e-5'}, res => -1e-5;
+test_parse name=>'exponent 5', args=>{text=>'1,1e2'}, res => 1.1e2;
 
 DONE_TESTING:
 done_testing();
