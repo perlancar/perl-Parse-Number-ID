@@ -70,8 +70,8 @@ __END__
 
 This module parses numbers from text, according to Indonesian rule of decimal-
 and thousand separators ("," and "." respectively, while English uses "." and
-"," respectively). Since English numbers are more widespread, it will be parsed
-to whenever unambiguous, e.g.:
+","). Since English numbers are more widespread, it will be parsed to whenever
+unambiguous, e.g.:
 
  12.3     # 12.3
  12.34    # 12.34
