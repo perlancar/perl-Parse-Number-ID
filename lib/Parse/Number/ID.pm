@@ -63,7 +63,9 @@ __END__
 
  use Parse::Number::ID qw(parse_number_id);
 
- my $num = parse_number_id(text=>"12.345,67"); # 12345.67
+ my @a = map {parse_number_id(text=>$_)}
+     ("12.345,67", "-1,2e3", "x123", "1.23");
+ # @a = [12345.67, -1200, undef, 1.23]
 
 
 =head1 DESCRIPTION
