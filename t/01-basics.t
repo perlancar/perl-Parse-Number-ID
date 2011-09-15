@@ -30,14 +30,20 @@ sub test_parse {
 test_parse name => 'empty string', args=>{text => ''}, res => undef;
 test_parse name => 'no digits', args=>{text => 'x'}, res => undef;
 test_parse name => 'int', args=>{text => '123'}, res => 123;
+test_parse name => 'int (2)', args=>{text => '-123'}, res => -123;
+test_parse name => 'int (3)', args=>{text => '+123'}, res => 123;
+test_parse name => 'double sign = err (1)', args=>{text=>'--123'}, res => undef;
+test_parse name => 'double sign = err (2)', args=>{text=>'++123'}, res => undef;
 test_parse name => 'whitespace', args=>{text => ' 123 '}, res => 123;
 test_parse name => 'nondigit', args=>{text => 'x123'}, res => undef;
 test_parse name => 'nondigit 2', args=>{text => '1, 2, 3'}, res => 1;
 test_parse name => 'nondigit 2b', args=>{text => '1x23'}, res => 1;
 test_parse name => 'decimal (id 1)', args=>{text => '12,3'}, res => 12.3;
 test_parse name => 'decimal (id 2)', args=>{text => ',3'}, res => 0.3;
+test_parse name => 'decimal (id 3)', args=>{text => '-12,3'}, res => -12.3;
 test_parse name => 'decimal (en 1)', args=>{text => '12.31'}, res => 12.31;
 test_parse name => 'decimal (en 2)', args=>{text => ',31'}, res => 0.31;
+test_parse name => 'decimal (en 3)', args=>{text => '-12.31'}, res => -12.31;
 test_parse name=>'thousand sep 1', args=>{text=>'123.001'}, res => 123001;
 test_parse name=>'thousand sep 2', args=>{text=>'12.300.000'}, res => 12300000;
 

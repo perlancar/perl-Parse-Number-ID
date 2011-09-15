@@ -20,8 +20,9 @@ sub _clean_nd {
 
 sub _parse_mantissa {
     my $n = shift;
-    if ($n =~ /^([\d,.]*)\.(\d{0,2})$/) {
-        return _clean_nd($1 || 0) + "0.$2";
+    if ($n =~ /^([+-]?)([\d,.]*)\.(\d{0,2})$/) {
+        return (_clean_nd($2 || 0) + "0.$3")*
+            ($1 eq '-' ? -1 : 1);
     } else {
         $n =~ s/\.//g;
         $n =~ s/,/./g;
