@@ -6,11 +6,22 @@ use warnings;
 
 require Exporter;
 our @ISA       = qw(Exporter);
-our @EXPORT_OK = qw(parse_number_id);
+our @EXPORT_OK = qw(parse_number_id $Pat);
 
 # VERSION
 
 our %SPEC;
+
+our $Pat = qr/(?:
+                  [+-]?
+                  (?:
+                      \d{1,2}([.]\d{3})*(?:[,]\d*)? | # indo
+                      \d{1,2}([,]\d{3})*(?:[.]\d*)? | # english
+                      [,.]\d+ |
+                      \d+
+                  )
+                  (?:[Ee][+-]?\d+)?
+              )/x;
 
 sub _clean_nd {
     my $n = shift;
@@ -82,6 +93,16 @@ unambiguous, e.g.:
 
 This module does not parse numbers that are written as Indonesian words, e.g.
 "seratus dua puluh tiga" (123). See L<Lingua::ID::Words2Nums> for that.
+
+
+=head1 VARIABLES
+
+None are exported by default, but they are exportable.
+
+=head2 $Pat (REGEX)
+
+A regex for quickly matching/extracting number from text. It's not 100% perfect
+(the extracted number might not be valid), but it's simple and fast.
 
 
 =head1 FUNCTIONS
