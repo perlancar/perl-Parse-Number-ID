@@ -43,11 +43,15 @@ sub _parse_mantissa {
 }
 
 $SPEC{parse_number_id} = {
+    v => 1.1,
     summary => 'Parse number from Indonesian text',
     args    => {
-        text => ['str*' => {
+        text => {
             summary => 'The input text that contains number',
-        }],
+            schema => 'str*',
+            pos => 0,
+            req => 1,
+        },
     },
     result_naked => 1,
 };
