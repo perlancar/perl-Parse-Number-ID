@@ -114,6 +114,18 @@ A regex for quickly matching/extracting number from text. It's not 100% perfect
 None of the functions are exported by default, but they are exportable.
 
 
+=head1 FAQ
+
+=head2 How does this module differ from other number-parsing modules?
+
+This module uses a single regex and provides the regex for you to use. Other
+modules might be more accurate and/or faster. But this module is pretty fast.
+
+Also, since English text are often found in Indonesian text, parsing English
+numbers (which uses periods for decimals and commas for thousand separators
+instead of the other way around) is also done, as long as it is not ambiguous.
+
+
 =head1 SEE ALSO
 
 L<Lingua::ID::Words2Nums>
