@@ -73,7 +73,6 @@ sub parse_number_id {
 
 1;
 # ABSTRACT: Parse number from Indonesian text
-__END__
 
 =head1 SYNOPSIS
 
@@ -86,14 +85,17 @@ __END__
 
 =head1 DESCRIPTION
 
-This module parses numbers from text, according to Indonesian rule of decimal-
-and thousand separators ("," and "." respectively, while English uses "." and
-","). Since English numbers are more widespread, it will be parsed too whenever
-unambiguous, e.g.:
+The goal of this module is to parse/extract numbers commonly found in Indonesian
+text. It currently parses numbers according to Indonesian rule of decimal- and
+thousand separators ("," and "." respectively) I<as well as> English ("." and
+","), since English numbers are more widespread and sometimes mixed within.
 
  12.3     # 12.3
  12.34    # 12.34
  12.345   # 12345
+
+In the future this module might also parse fractions (e.g. 1/3, 2 1/2) and
+percentages (e.g. 1,2%).
 
 This module does not parse numbers that are written as Indonesian words, e.g.
 "seratus dua puluh tiga" (123). See L<Lingua::ID::Words2Nums> for that.
