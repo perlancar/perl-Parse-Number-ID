@@ -1,25 +1,25 @@
 Revision history for Parse-Number-ID
 
-0.05    2012-06-26
+0.05    2012-06-26 (SHARYANTO)
 
-        No functional changes. Tweak Rinci metadata.
-
-
-0.04    2012-03-23
-
-        No functional changes. Remove dependency to old module Sub::Spec.
+        - No functional changes. Tweak Rinci metadata.
 
 
-0.03    2011-09-23
+0.04    2012-03-23 (SHARYANTO)
 
-        Provide $Pat.
+        - No functional changes. Remove dependency to old module Sub::Spec.
 
 
-0.02    2011-09-15
+0.03    2011-09-23 (SHARYANTO)
+
+        - Provide $Pat.
+
+
+0.02    2011-09-15 (SHARYANTO)
 
         - Fix parsing negative/signed float.
 
 
-0.01    2011-09-14
+0.01    2011-09-14 (SHARYANTO)
 
-        First release.
+        - First release.
