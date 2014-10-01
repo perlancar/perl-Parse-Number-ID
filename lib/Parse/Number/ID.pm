@@ -98,14 +98,15 @@ In the future this module might also parse fractions (e.g. 1/3, 2 1/2) and
 percentages (e.g. 1,2%).
 
 This module does not parse numbers that are written as Indonesian words, e.g.
-"seratus dua puluh tiga" (123). See L<Lingua::ID::Words2Nums> for that.
+"seratus dua puluh tiga" (123). See L<Lingua::ID::Words2Nums> and
+L<Regexp::ID::NumVerbage> for that.
 
 
 =head1 VARIABLES
 
 None are exported by default, but they are exportable.
 
-=head2 $Pat (REGEX)
+=head2 $Pat (regex)
 
 A regex for quickly matching/extracting number from text. It's not 100% perfect
 (the extracted number might not be valid), but it's simple and fast.
