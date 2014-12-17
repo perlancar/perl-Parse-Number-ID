@@ -1,5 +1,8 @@
 package Parse::Number::ID;
 
+# DATE
+# VERSION
+
 use 5.010001;
 use strict;
 use warnings;
@@ -7,8 +10,6 @@ use warnings;
 require Exporter;
 our @ISA       = qw(Exporter);
 our @EXPORT_OK = qw(parse_number_id $Pat);
-
-# VERSION
 
 our %SPEC;
 
@@ -75,7 +76,7 @@ sub parse_number_id {
 }
 
 1;
-# ABSTRACT: Parse number from Indonesian text
+# ABSTRACT:
 
 =head1 SYNOPSIS
 
