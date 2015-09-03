@@ -116,11 +116,6 @@ A regex for quickly matching/extracting number from text. It's not 100% perfect
 (the extracted number might not be valid), but it's simple and fast.
 
 
-=head1 FUNCTIONS
-
-None of the functions are exported by default, but they are exportable.
-
-
 =head1 FAQ
 
 =head2 How does this module differ from other number-parsing modules?
