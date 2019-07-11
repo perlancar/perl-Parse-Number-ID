@@ -1,4 +1,4 @@
-0.08    2015-09-03 (PERLANCAR)
+0.08    2015-09-03  Released-By: PERLANCAR
 
 	- No functional changes.
 
@@ -7,38 +7,38 @@
 	  requirement.
 
 
-0.07    2014-10-03 (PERLANCAR)
+0.07    2014-10-03  Released-By: PERLANCAR
 
         - No functional changes.
 
         - Produce non /x regex string instead of /x regexp object in $Pat.
 
 
-0.06    2014-09-28 (PERLANCAR)
+0.06    2014-09-28  Released-By: PERLANCAR
 
         - Avoid capturing group in regex pattern.
 
 
-0.05    2012-06-26 (SHARYANTO)
+0.05    2012-06-26  Released-By: SHARYANTO
 
         - No functional changes. Tweak Rinci metadata.
 
 
-0.04    2012-03-23 (SHARYANTO)
+0.04    2012-03-23  Released-By: SHARYANTO
 
         - No functional changes. Remove dependency to old module Sub::Spec.
 
 
-0.03    2011-09-23 (SHARYANTO)
+0.03    2011-09-23  Released-By: SHARYANTO
 
         - Provide $Pat.
 
 
-0.02    2011-09-15 (SHARYANTO)
+0.02    2011-09-15  Released-By: SHARYANTO
 
         - Fix parsing negative/signed float.
 
 
-0.01    2011-09-14 (SHARYANTO)
+0.01    2011-09-14  Released-By: SHARYANTO
 
         - First release.
